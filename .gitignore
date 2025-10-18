@@ -1,0 +1,65 @@
+# SageMaker .gitignore
+# ==========================
+# Jupyter & SageMaker Project Ignore List
+# ==========================
+
+# System & temp
+.DS_Store
+*.swp
+*.log
+*.tmp
+
+# Python cache / venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+env/
+venv/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# SageMaker & metadata
+.sagemaker/
+*.tar.gz
+*.zip
+*.joblib
+*.pkl
+*.jsonl
+*.npy
+*.npz
+
+# Model artifacts / outputs
+model/
+outputs/
+deploy_bundle/*.tar.gz
+deploy_bundle/*.joblib
+deploy_bundle/*.pkl
+
+# Data folders
+data/raw/
+data/intermediate/
+*.csv
+
+# AWS & config
+*.json
+*.yaml
+*.yml
+.aws/
+config/
+.cache/
+
+# ==========================
+# Files to KEEP
+# ==========================
+!finalProject.ipynb
+!code/
+!baseline/
+!data/
+!deploy_bundle/
+
+# Large-file reminder
+# Any file >100 MB will be blocked by pre-commit hook
