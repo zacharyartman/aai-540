@@ -63,3 +63,4 @@ config/
 
 # Large-file reminder
 # Any file >100 MB will be blocked by pre-commit hook
+!finalProject.ipynb
