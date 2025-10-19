@@ -1,0 +1,15 @@
+name: Deploy to SageMaker
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Sync code to S3
+        run: |
+          aws s3 sync . s3://sagemaker-us-east-1-471112536460/model-monitor-demo/code --exclude ".git/*"
